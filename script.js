@@ -364,12 +364,7 @@ if (input.value.includes("a")) {
  
  var Senden = document.getElementById("Submit");
 
- function sendenc(event) {
-    if (event.key === "Enter") {
-        senden();
-    }
-}
- document.addEventListener("keydown",sendenc);
+ document.addEventListener("keydown",senden);
  Senden.onclick = senden;
 
  
