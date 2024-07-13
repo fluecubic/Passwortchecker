@@ -1,14 +1,17 @@
 var input = document.getElementById("input");
 var Ergebnis = document.getElementById("Ergebnis");
 let mpz = 0;
+let m = 0;
 
 let s;
 let E;
  
   function senden() {
      console.log("Senden")
-     
+     s = 0;
      mpz = 0;
+     m = 0;
+
 if (input.value.includes("a")) {
     mpz = mpz + 26; 
  }
@@ -323,12 +326,16 @@ if (input.value.includes("a")) {
  
  
  
-    console.log("mpz:"+mpz)
-    let m = mpz ** input.value.length;
-    m = m/2;
-    s = m/2150000000;
+    console.log("mpz:"+mpz);
 
-    if (s>60) {
+    if (mpz>0) {
+
+        m = mpz ** input.value.length;
+        m = m/2;
+        console.log("m:"+m);
+        s = m/2150000000;
+
+        if (s>60) {
         s = s/60 
         E = " Minuten"
         console.log("Min")
@@ -354,17 +361,25 @@ if (input.value.includes("a")) {
         E = " Sekunden"
         console.log("s")
       }
-    Ergebnis.innerHTML = "Ein guter PC braucht durschnittlich "+ s + E + ", um dein Passwort zu erraten"
-    
+
+      Ergebnis.innerHTML = "Ein guter PC braucht durschnittlich "+ s + E + ", um dein Passwort zu erraten";
+   
+    }
+
+    else {
+        Ergebnis.innerHTML = "Gib dein Passwort ein";
+    }
 };
 
- 
+ function sendenc() {
+    setTimeout(senden,100);
+ }
  
 
  
  var Senden = document.getElementById("Submit");
 
- document.addEventListener("keydown",senden);
+ document.addEventListener("keydown",sendenc);
  Senden.onclick = senden;
 
  
