@@ -1,11 +1,4 @@
-@font-face {
-    font-family: Hand;
-    src: url(./Fonts/MakingLetteringTallDemo-Eya8.ttf);
-}
-@font-face {
-    font-family: Gala;
-    src: url(./Fonts/GalacticVanguardianNcv-myVP.ttf);
-}
+
 @font-face {
     font-family: norm;
     src: url(./Fonts/Rubik-VariableFont_wght.ttf);
@@ -22,11 +15,14 @@ button:hover{
     opacity: 0.7;
 }
 input{
-    margin-left: 20%;
     border-radius: 5px;
     font-size: 20px;
     height: 25px;
     width: 300px;
+    border: 0px;
+}
+input:focus {
+    outline: none;
 }
 button{
     padding: 0px;
@@ -35,10 +31,27 @@ button{
     border-color:rgb(61, 52, 141) ;
     border-radius: 5px;
     font-family: norm;
+    margin-left: 5px;
 }
 #titel{
     font-size: 60px;
 }
 body{
     background-color: rgb(0, 0, 0);
+}
+img{
+    width:31px;
+    height: 31px;
+}
+img:hover{
+ opacity: 0.7;
+}
+#inputin{
+    background-color: white;
+    display: flex;
+    width: 300px;
+    border-radius: 5px;
+}
+#inputout{
+    display: flex;
 }

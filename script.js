@@ -1,5 +1,5 @@
-var input = document.getElementById("input");
-var Ergebnis = document.getElementById("Ergebnis");
+let input = document.getElementById("input");
+let Ergebnis = document.getElementById("Ergebnis");
 let mpz = 0;
 let m = 0;
 
@@ -377,9 +377,26 @@ if (input.value.includes("a")) {
  
 
  
- var Senden = document.getElementById("Submit");
+ let Senden = document.getElementById("Submit");
 
  document.addEventListener("keydown",sendenc);
  Senden.onclick = senden;
 
- 
+//wechseln 
+let eye = document.getElementById("eye")
+let mode = "view"
+
+function changeMode() {
+ if (mode == "view") {
+  mode = "hide";
+  input.type = "password";
+  eye.src = "./Bilder/view.png";
+} else{
+  mode = "view";
+  input.type = "text";
+  eye.src = "./Bilder/hide.png";  
+}  
+}
+
+
+eye.onclick = changeMode;
