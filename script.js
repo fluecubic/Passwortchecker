@@ -362,7 +362,7 @@ if (input.value.includes("a")) {
         console.log("s")
       }
 
-      Ergebnis.innerHTML = "Ein guter PC braucht durschnittlich "+ s + E + ", um dein Passwort zu erraten";
+      Ergebnis.innerHTML = "Ein guter PC braucht durschnittlich "+ s + E + ", um dein Passwort zu erraten und muss "+ m " kombinationen durchgegehen";
    
     }
 
@@ -397,6 +397,7 @@ function changeMode() {
   eye.src = "./Bilder/hide.png";  
 }  
 }
+
 
 
 eye.onclick = changeMode;
